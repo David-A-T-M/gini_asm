@@ -12,10 +12,10 @@ class MyServer32(Server32):
         # The Server32 class has a 'lib' property that is a reference to the ctypes.CDLL object
 
         # Call the version function from the library
-        self.lib.add1.restype = ctypes.c_int
-        self.lib.add1.argtypes = [ctypes.c_float]
+        self.lib.cFloatToInt.restype = ctypes.c_int
+        self.lib.cFloatToInt.argtypes = [ctypes.c_float]
         # self.version = self.lib.version()   #used if c function doesn't take arguments
 
-    def add1(self, f):
+    def ftoi32(self, f):
         # The shared library's 'add1' function takes a float and returns the integer part of the number plus one
-        return self.lib.add1(f)
+        return self.lib.cFloatToInt(f)
