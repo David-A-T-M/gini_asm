@@ -3,7 +3,7 @@ from msl.loadlib import Server32
 
 
 class MyServer32(Server32):
-    """Wrapper around a 32-bit C library 'libftoi.so' that has an 'add1' and 'version' function."""
+    """Wrapper around a 32-bit C library 'libftoi.so' that has an 'add1' function."""
 
     def __init__(self, host, port, **kwargs):
         # Load the 'libftoi' shared-library file using ctypes.CDLL
